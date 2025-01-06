@@ -1,0 +1,37 @@
+@import "semantic.css"; /* Import Semantic Variables */
+@import "theme.css"; /* Import Theme Variables */
+
+body {
+  background-color: var(--background-default);
+  color: var(--text-primary);
+  font-family: var(--29cm-default-font);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+section {
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  background-color: var(--gray-600);
+}
+
+button {
+  background-color: var(--interactive);
+  color: var(--fill-primary);
+  border: 1px solid var(--border-divider);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: var(--text-secondary);
+}
