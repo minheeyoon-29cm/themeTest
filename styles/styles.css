@@ -2,7 +2,7 @@
 @import "theme.css"; /* Import Theme Variables */
 
 body {
-  background-color: var(--background-default);
+  background-color: var(--gray-200);
   color: var(--text-primary);
   font-family: var(--29cm-default-font);
   margin: 0;
@@ -11,15 +11,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   transition: background-color 0.3s, color 0.3s;
-}
-
-section {
-  width: 100%;
-  max-width: 700px;
-  height: 500px;
-  background-color: var(--gray-600);
+  height: auto; /* 높이를 자동으로 설정 */
+  overflow-y: auto; /* 세로 스크롤 활성화 */
 }
 
 button {
@@ -34,4 +28,116 @@ button {
 
 button:hover {
   background-color: var(--text-secondary);
+}
+
+svg {
+  fill: var(--common-on-white);
+}
+
+nav {
+  position: fixed; /* 화면에 고정 */
+  bottom: 20px; /* 화면 하단으로부터의 간격 */
+  left: 50%; /* 화면의 가로 중앙으로 이동 */
+  transform: translateX(-50%); /* 가로 중앙 정렬 */
+  display: flex; /* 버튼들을 가로로 배치 */
+  gap: 10px; /* 버튼 사이 간격 */
+  background-color: rgba(255, 255, 255, 0.8); /* 약간 투명한 배경색 */
+  padding: 10px 20px; /* 내부 여백 */
+  border-radius: 8px; /* 둥근 모서리 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  z-index: 100; /* 다른 요소 위에 위치 */
+}
+
+
+/* ---------- */
+
+.section {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  overflow-y: auto; /* 세로 스크롤 활성화 */
+  background-color: var(--background-default);
+}
+
+.top-navi-container {
+  position: absolute;
+  width: 100%;
+  max-width: 700px;
+  top:44px;
+  z-index: 10;
+}
+
+.top-navi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.tag {
+  padding: 6px 16px;
+  border-radius: var(--corner-radius-full);
+  border: 1px solid;
+  border-color: var(--common-on-white);
+  color: var(--common-on-white);
+  opacity: 0.6;
+  cursor: pointer;
+  font-size: var(--font-size-125);
+  font-weight: var(--medium-500);
+}
+
+.tag-group {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  gap: 10px;
+}
+
+.top-hero-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden; /* 블러 배경이 섹션을 넘어가지 않도록 */
+}
+
+.blurred-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1727149924916-a63101f4a7cc?q=80&w=2727&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  z-index: 0;
+}
+
+.blurred-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  background:var(--background-gradation);
+  backdrop-filter: blur(75px);
+  z-index: 1;
+}
+.carousel {
+  position: relative;
+  z-index: 1;
+  top: 152px;
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 12px; /* 이미지 간 간격 */
+}
+
+.carousel, img {
+  width: 95%;
+  aspect-ratio: 5 / 6;
+  object-fit: cover; /* 비율 유지 */
+  margin: 0 auto; /* 이미지 중앙 정렬 */
+  border-radius: var(--corner-radius-75);
 }

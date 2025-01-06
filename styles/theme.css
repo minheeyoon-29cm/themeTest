@@ -81,6 +81,8 @@
   --green-alpha-200: rgba(18, 186, 35, 0.08);
   --green-alpha-300: rgba(18, 186, 35, 0.08);
   --green-alpha-400: rgba(18, 186, 35, 0.08);
+  --static-white : #ffffff;
+  --static-black : #000000;
   --corner-radius-25: 2px;
   --corner-radius-50: 4px;
   --corner-radius-75: 6px;
@@ -129,6 +131,8 @@
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+    --background-gradation :  linear-gradient(180deg, rgba(48, 48, 51, 0.20) 0%, #FFF 100%);
 }
 
 [data-theme="dark"] {
@@ -256,4 +260,288 @@
   --line-height-4: 140%;
   --line-height-5: 150%;
   --line-height-6: 160%;
+  --background-gradation :  linear-gradient(180deg, rgba(48, 48, 51, 0.20) 0%, #000 100%);
+}
+
+
+[data-theme="basic"] {
+  --gray-00: #ffffff;
+  --gray-100: #f4f4f4;
+  --gray-200: #e4e4e4;
+  --gray-300: #c4c4c4;
+  --gray-400: #a0a0a0;
+  --gray-500: #5d5d5d;
+  --gray-600: #474747;
+  --gray-700: #303033;
+  --gray-800: #27272a;
+  --gray-900: #19191a;
+  --gray-950: #000000;
+  --orange-red-100: #ffefeb;
+  --orange-red-200: #ffbfaa;
+  --orange-red-300: #ff916c;
+  --orange-red-400: #ff6933;
+  --orange-red-500: #ff4800;
+  --orange-red-600: #d53f00;
+  --orange-red-700: #ab3803;
+  --orange-red-800: #823107;
+  --orange-red-900: #582609;
+  --orange-red-950: #2e1608;
+  --deep-red-100: #ffe6e6;
+  --deep-red-200: #f2a9a9;
+  --deep-red-300: #e67373;
+  --deep-red-400: #d94141;
+  --deep-red-500: #cc1414;
+  --deep-red-600: #ad0700;
+  --deep-red-700: #8f0b00;
+  --deep-red-800: #700d00;
+  --deep-red-900: #520d00;
+  --deep-red-950: #330a00;
+  --blue-100: #ebf1ff;
+  --blue-200: #b8cdff;
+  --blue-300: #86a5ff;
+  --blue-400: #5b7fff;
+  --blue-500: #375fff;
+  --blue-600: #203ff6;
+  --blue-700: #1025e5;
+  --blue-800: #0611bd;
+  --blue-900: #010474;
+  --blue-950: #000033;
+  --yellow-100: #fff7f0;
+  --yellow-200: #ffdfb9;
+  --yellow-300: #ffc97f;
+  --yellow-400: #ffb741;
+  --yellow-500: #ffa800;
+  --yellow-600: #d18d16;
+  --yellow-700: #a37021;
+  --yellow-800: #755322;
+  --yellow-900: #47341b;
+  --yellow-950: #19130c;
+  --green-100: #eefee6;
+  --green-200: #c2eeb2;
+  --green-300: #81dc71;
+  --green-400: #3fcb3c;
+  --green-500: #12ba23;
+  --green-600: #139e14;
+  --green-700: #1e8215;
+  --green-800: #246616;
+  --green-900: #234a15;
+  --green-950: #1b2e11;
+  --gray-alpha-200: rgba(93, 93, 93, 0.08);
+  --gray-alpha-300: rgba(93, 93, 93, 0.16);
+  --gray-alpha-400: rgba(93, 93, 93, 0.24);
+  --gray-alpha-500: rgba(93, 93, 93, 0.4);
+  --gray-alpha-600: rgba(93, 93, 93, 0.52);
+  --gray-alpha-700: rgba(93, 93, 93, 0.64);
+  --gray-alpha-800: rgba(93, 93, 93, 0.8);
+  --orange-red-alpha-200: rgba(255, 72, 0, 0.08);
+  --orange-red-alpha-300: rgba(255, 72, 0, 0.16);
+  --orange-red-alpha-400: rgba(255, 72, 0, 0.24);
+  --deep-red-alpha-200: rgba(204, 20, 20, 0.08);
+  --deep-red-alpha-300: rgba(204, 20, 20, 0.16);
+  --deep-red-alpha-400: rgba(204, 20, 20, 0.24);
+  --blue-alpha-200: rgba(55, 95, 255, 0.08);
+  --blue-alpha-300: rgba(55, 95, 255, 0.08);
+  --blue-alpha-400: rgba(55, 95, 255, 0.08);
+  --green-alpha-200: rgba(18, 186, 35, 0.08);
+  --green-alpha-300: rgba(18, 186, 35, 0.08);
+  --green-alpha-400: rgba(18, 186, 35, 0.08);
+  --static-white : #ffffff;
+  --static-black : #000000;
+  --corner-radius-25: 2px;
+  --corner-radius-50: 4px;
+  --corner-radius-75: 6px;
+  --corner-radius-100: 8px;
+  --corner-radius-200: 16px;
+  --corner-radius-250: 20px;
+  --corner-radius-full: 9999px;
+  --font-size-25: 10px;
+  --font-size-50: 11px;
+  --font-size-75: 12px;
+  --font-size-100: 13px;
+  --font-size-125: 14px;
+  --font-size-150: 15px;
+  --font-size-200: 16px;
+  --font-size-250: 18px;
+  --font-size-300: 20px;
+  --font-size-350: 22px;
+  --font-size-400: 24px;
+  --font-size-500: 28px;
+  --font-size-550: 30px;
+  --font-size-600: 32px;
+  --font-size-1000: 48px;
+  --font-size-1300: 60px;
+  --font-size-1400: 64px;
+  --font-size-1500: 68px;
+  --font-size-1600: 72px;
+  --font-size-2100: 92px;
+  --thin-100: 100;
+  --extraLight-200: 200;
+  --light-300: 300;
+  --regular-400: 400;
+  --medium-500: 500;
+  --semibold-600: 600;
+  --bold-700: 700;
+  --extraBold-800: 800;
+  --narrow-base-ios: 0em;
+  --narrow-base-android: -0.5em;
+  --narrow-base-web: 0em;
+  --line-height-1: 100%;
+  --line-height-2: 120%;
+  --line-height-3: 136%;
+  --line-height-4: 140%;
+  --line-height-5: 150%;
+  --line-height-6: 160%;
+  --29cm-default-font: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    --background-gradation :  linear-gradient(180deg, rgba(48, 48, 51, 0.20) 0%, #FFF 100%);
+}
+
+[data-theme="basic"][data-dark-mode="dark"] {
+  --gray-00: #000000;
+  --gray-100: #19191a;
+  --gray-200: #27272a;
+  --gray-300: #303033;
+  --gray-400: #474747;
+  --gray-500: #5d5d5d;
+  --gray-600: #a0a0a0;
+  --gray-700: #c4c4c4;
+  --gray-800: #e4e4e4;
+  --gray-900: #f4f4f4;
+  --gray-950: #ffffff;
+  --orange-red-100: #2e1608;
+  --orange-red-200: #582509;
+  --orange-red-300: #822f07;
+  --orange-red-400: #ab3703;
+  --orange-red-500: #d53e00;
+  --orange-red-600: #ff4800;
+  --orange-red-700: #ff6c37;
+  --orange-red-800: #ff9672;
+  --orange-red-900: #ffc3b0;
+  --orange-red-950: #ffefeb;
+  --deep-red-100: #330a00;
+  --deep-red-200: #520d00;
+  --deep-red-300: #700d00;
+  --deep-red-400: #8f0b00;
+  --deep-red-500: #ad0700;
+  --deep-red-600: #cc1414;
+  --deep-red-700: #d94141;
+  --deep-red-800: #e67373;
+  --deep-red-900: #f2a9a9;
+  --deep-red-950: #ffe6e6;
+  --blue-100: #000033;
+  --blue-200: #01058b;
+  --blue-300: #0510be;
+  --blue-400: #0e22dd;
+  --blue-500: #1e3cf2;
+  --blue-600: #375fff;
+  --blue-700: #5f83ff;
+  --blue-800: #8dabff;
+  --blue-900: #bdd1ff;
+  --blue-950: #ebf1ff;
+  --yellow-100: #1a130c;
+  --yellow-200: #47341c;
+  --yellow-300: #755323;
+  --yellow-400: #a37122;
+  --yellow-500: #d18d17;
+  --yellow-600: #ffa800;
+  --yellow-700: #ffb741;
+  --yellow-800: #ffc97f;
+  --yellow-900: #ffdfb9;
+  --yellow-950: #fff7f0;
+  --green-100: #1b2e11;
+  --green-200: #234a15;
+  --green-300: #246616;
+  --green-400: #1e8214;
+  --green-500: #129e14;
+  --green-600: #12ba23;
+  --green-700: #42cb3e;
+  --green-800: #85dd76;
+  --green-900: #c5eeb6;
+  --green-950: #eefee6;
+  --gray-alpha-200: rgba(244, 244, 244, 0.08);
+  --gray-alpha-300: rgba(244, 244, 244, 0.16);
+  --gray-alpha-400: rgba(244, 244, 244, 0.24);
+  --gray-alpha-500: rgba(244, 244, 244, 0.54);
+  --gray-alpha-600: rgba(244, 244, 244, 0.64);
+  --gray-alpha-700: rgba(244, 244, 244, 0.74);
+  --gray-alpha-800: rgba(244, 244, 244, 0.84);
+  --orange-red-alpha-200: rgba(255, 195, 176, 0.08);
+  --orange-red-alpha-300: rgba(255, 195, 176, 0.16);
+  --orange-red-alpha-400: rgba(255, 195, 176, 0.24);
+  --deep-red-alpha-200: rgba(173, 7, 0, 0.08);
+  --deep-red-alpha-300: rgba(173, 7, 0, 0.16);
+  --deep-red-alpha-400: rgba(173, 7, 0, 0.24);
+  --blue-alpha-200: rgba(189, 209, 255, 0.08);
+  --blue-alpha-300: rgba(189, 209, 255, 0.16);
+  --blue-alpha-400: rgba(189, 209, 255, 0.24);
+  --green-alpha-200: rgba(133, 221, 118, 0.08);
+  --green-alpha-300: rgba(133, 221, 118, 0.16);
+  --green-alpha-400: rgba(133, 221, 118, 0.24);
+  --corner-radius-25: 2px;
+  --corner-radius-50: 4px;
+  --corner-radius-75: 6px;
+  --corner-radius-100: 8px;
+  --corner-radius-200: 16px;
+  --corner-radius-250: 20px;
+  --corner-radius-full: 9999px;
+  --font-size-25: 10px;
+  --font-size-50: 11px;
+  --font-size-75: 12px;
+  --font-size-100: 13px;
+  --font-size-125: 14px;
+  --font-size-150: 15px;
+  --font-size-200: 16px;
+  --font-size-250: 18px;
+  --font-size-300: 20px;
+  --font-size-350: 22px;
+  --font-size-400: 24px;
+  --font-size-500: 28px;
+  --font-size-550: 30px;
+  --font-size-600: 32px;
+  --font-size-1000: 48px;
+  --font-size-1300: 60px;
+  --font-size-1400: 64px;
+  --font-size-1500: 68px;
+  --font-size-1600: 72px;
+  --font-size-2100: 92px;
+  --thin-100: 100;
+  --extraLight-200: 200;
+  --light-300: 300;
+  --regular-400: 400;
+  --medium-500: 500;
+  --semibold-600: 600;
+  --bold-700: 700;
+  --extraBold-800: 800;
+  --narrow-base-ios: 0em;
+  --narrow-base-android: -0.5em;
+  --narrow-base-web: 0em;
+  --line-height-1: 100%;
+  --line-height-2: 120%;
+  --line-height-3: 136%;
+  --line-height-4: 140%;
+  --line-height-5: 150%;
+  --line-height-6: 160%;
+  --background-gradation :  linear-gradient(180deg, rgba(48, 48, 51, 0.20) 0%, #000 100%);
+}
+
+[data-theme="cute"] {
+  --background-default: #fff0f5;
+  --text-primary: #ff69b4;
+}
+
+[data-theme="cute"][data-dark-mode="dark"] {
+  --background-default: #4a2040;
+  --text-primary: #ffb6c1;
+}
+
+[data-theme="vivid"] {
+  --background-default: #ffe135;
+  --text-primary: #ff4500;
+}
+
+[data-theme="vivid"][data-dark-mode="dark"] {
+  --background-default: #4a2e00;
+  --text-primary: #ffa500;
 }
