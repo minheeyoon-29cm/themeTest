@@ -48,22 +48,25 @@ nav {
   z-index: 100; /* 다른 요소 위에 위치 */
 }
 
-
 /* ---------- */
 
 .section {
   width: 100%;
   max-width: 700px;
-  height: 100%;
+  height: 100vh;
   overflow-y: auto; /* 세로 스크롤 활성화 */
   background-color: var(--background-default);
+}
+
+.hero-banner {
+  height: fit-content;
 }
 
 .top-navi-container {
   position: absolute;
   width: 100%;
   max-width: 700px;
-  top:44px;
+  top: 44px;
   z-index: 10;
 }
 
@@ -97,7 +100,7 @@ nav {
 
 .top-hero-section {
   position: relative;
-  min-height: 100vh;
+  height: 100%;
   overflow: hidden; /* 블러 배경이 섹션을 넘어가지 않도록 */
 }
 
@@ -120,7 +123,7 @@ nav {
   width: 100%;
   max-width: 700px;
   height: 100%;
-  background:var(--background-gradation);
+  background: var(--background-gradation);
   backdrop-filter: blur(75px);
   z-index: 1;
 }
@@ -134,10 +137,23 @@ nav {
   gap: 12px; /* 이미지 간 간격 */
 }
 
-.carousel, img {
+.carousel-img {
   width: 95%;
   aspect-ratio: 5 / 6;
   object-fit: cover; /* 비율 유지 */
   margin: 0 auto; /* 이미지 중앙 정렬 */
   border-radius: var(--corner-radius-75);
+}
+
+.dynamic-gate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.dynamic-gate-img {
+  width: 50px;
+  object-fit: cover; /* 비율 유지 */
 }
