@@ -1,7 +1,6 @@
 @import "semantic.css"; /* Import Semantic Variables */
 @import "theme.css"; /* Import Theme Variables */
 
-
 /* CSS Reset */
 * {
   margin: 0;
@@ -9,22 +8,31 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   font-family: var(--29cm-default-font);
   background-color: var(--gray-100);
+  transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
 }
 
 body {
   margin: 0 auto;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
@@ -33,7 +41,8 @@ a {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -46,15 +55,13 @@ table {
 /* 디자인 시작점 */
 /* ------------------------ */
 
-
 .section {
   width: 390px;
   min-width: 375px;
   margin: 0 auto;
-  overflow-y: auto; 
+  overflow-y: auto;
   background-color: var(--background-default);
 }
-
 
 /* ------------------------ */
 /* 탑네비 */
@@ -77,7 +84,8 @@ table {
   height: 60px;
 }
 
-.top-navi, svg {
+.top-navi,
+svg {
   fill: var(--common-on-white);
 }
 
@@ -86,7 +94,6 @@ table {
   align-items: center;
   gap: 16px;
 }
-
 
 /* ------------------------ */
 /* 히어로 배너 섹션 */
@@ -113,8 +120,8 @@ table {
 
 .tag {
   color: var(--common-on-white);
-  font-size: var(--font-size-125, 14px);
-  font-weight: var(--medium-500, 500);
+  font-size: var(--font-size-125);
+  font-weight: var(--medium-500);
   border: 1px solid var(--static-white-alpha);
   background: var(--gray-alpha-300);
   padding: 6px 12px; /* 태그 크기 줄이기 */
@@ -166,17 +173,15 @@ table {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 이미지에 그림자 추가 */
 }
 
-
 /* ------------------------ */
 /* 다이나믹 게이트 */
 /* ------------------------ */
-
 
 .dynamic-gate {
   display: flex;
   align-items: center;
   background-color: var(--fill-silent);
-  box-shadow: 0px 2px 14px 0px var( --gray-alpha-300);
+  box-shadow: 0px 2px 14px 0px var(--gray-alpha-300);
   justify-content: space-between;
   margin-left: 20px;
   margin-right: 20px;
@@ -229,7 +234,7 @@ table {
   display: flex;
   justify-content: space-between;
 }
-.product-h-info{
+.product-h-info {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -239,7 +244,7 @@ table {
   margin-bottom: 16px;
 }
 
-.product-h-card{
+.product-h-card {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -276,7 +281,6 @@ table {
   fill: var(--gray-400);
 }
 
-
 /* ------------------------ */
 /* 당신을 위한 추천 */
 /* ------------------------ */
@@ -293,7 +297,7 @@ table {
   height: 52px;
 }
 
-.for-you h4 {
+.section-title h4 {
   color: var(--text-primary);
   font-size: var(--font-size-300);
   font-weight: var(--bold-700);
@@ -305,7 +309,7 @@ table {
 }
 
 .for-you-carousel {
-
+  margin-bottom: 48px;
 }
 .row {
   display: flex;
@@ -318,3 +322,101 @@ table {
   margin-bottom: 8px;
 }
 
+/* ------------------------ */
+/* 당신 취향의 브랜드 */
+/* ------------------------ */
+.brand-for-you {
+  margin: 0; /* 부모 컨테이너의 좌우 마진 제거 */
+  overflow: hidden; /* 스크롤바 숨기기 */
+}
+
+.brand-section-title {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.brand-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+.brand-section-title h4 {
+  color: var(--text-primary);
+  font-size: var(--font-size-300);
+  font-weight: var(--bold-700);
+}
+
+.brand-list {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto; /* 가로 스크롤 활성화 */
+  padding: 0 20px; /* 리스트의 좌우 패딩 추가 */
+  scroll-behavior: smooth; /* 부드러운 스크롤 */
+  margin-bottom: 60px;
+}
+
+.brand-list::-webkit-scrollbar {
+  display: none; /* 크롬 및 사파리에서 스크롤바 숨기기 */
+}
+
+.brand-item {
+  display: flex; /* Flexbox 활성화 */
+  flex-direction: column; /* 수직 방향 배치 */
+  align-items: center; /* 가로 가운데 정렬 */
+  justify-content: center; /* 세로 가운데 정렬 */
+  text-align: center;
+  flex-shrink: 0; /* 아이템이 축소되지 않도록 설정 */
+}
+
+.brand-item p {
+  font-size: var(--font-size-125);
+  color: var(--text-secondary);
+  font-weight: var(--regular-400);
+}
+
+.brand-item-img {
+  width: 64px;
+  height: 64px; /* 높이를 추가해 비율 유지 */
+  border-radius: var(--corner-radius-full);
+  margin-bottom: 8px;
+  object-fit: cover; /* 이미지를 컨테이너에 맞춤 */
+  border: 0.5px solid var(--gray-alpha-400);
+}
+
+/* ------------------------ */
+/* Sticky Navigation */
+/* ------------------------ */
+.sticky-nav {
+  position: sticky;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--gray-alpha-900);
+  backdrop-filter: blur(10px); /* 블러 효과 */
+  border-radius: 12px;
+  padding: 10px 20px;
+  max-width: 280px;
+  box-shadow: 0 4px 12px var(--gray-alpha-200);
+  z-index: 1000;
+  width: 90%; /* 너비를 화면의 90%로 설정 */
+  max-width: 300px; /* 최대 너비를 제한 */
+  margin: 0 auto; /* 추가적인 좌우 마진 설정 */
+  transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
+}
+
+.sticky-nav button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--text-on-color);
+}
