@@ -12,6 +12,7 @@
 html, body {
   height: 100%;
   font-family: var(--29cm-default-font);
+  background-color: var(--gray-100);
 }
 
 body {
@@ -47,9 +48,11 @@ table {
 
 
 .section {
-  max-width: 500px;
+  width: 390px;
+  min-width: 375px;
   margin: 0 auto;
   overflow-y: auto; 
+  background-color: var(--background-default);
 }
 
 
@@ -59,7 +62,8 @@ table {
 .top-navi-container {
   position: absolute;
   width: 100%;
-  max-width: 500px;
+  max-width: 390px;
+  min-width: 375px;
   z-index: 10;
 }
 
@@ -83,80 +87,234 @@ table {
   gap: 16px;
 }
 
+
+/* ------------------------ */
+/* 히어로 배너 섹션 */
+/* ------------------------ */
+.top-hero-section {
+  position: relative;
+  height: 560px;
+}
+
+.hero-banner {
+  position: relative;
+  height: 560px;
+  overflow: hidden;
+}
+
+/* 태그 그룹 */
 .tag-group {
   display: flex;
-  align-items: flex-start;
-  margin-left: 20px;
-  margin-bottom: 16px;
-  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 8px 20px; /* 상단-하단 여백 줄이기 */
+  gap: 10px; /* 태그 간 간격 */
 }
 
 .tag {
   color: var(--common-on-white);
   font-size: var(--font-size-125, 14px);
   font-weight: var(--medium-500, 500);
-  border: 1px solid var(--gray-200);
-  background:var(--gray-alpha-300);
-  padding: 8px 16px;
+  border: 1px solid var(--static-white-alpha);
+  background: var(--gray-alpha-300);
+  padding: 6px 12px; /* 태그 크기 줄이기 */
   border-radius: var(--corner-radius-full);
   cursor: pointer;
 }
 
-
-/* ------------------------ */
-/* 히어로배너섹션 */
-/* ------------------------ */
-.top-hero-section {
-  height: 700px;
-}
-
-.hero-banner {
-  position: relative;
-  background-color: blue;
-  height: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-
-.blurred-bg-img  {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 700px;
-  height: 100%;
-  background-size: cover;
-  background-image: url("https://images.unsplash.com/photo-1727149924916-a63101f4a7cc?q=80&w=2727&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  z-index: 0;
-}
-
+/* 흐릿한 배경 */
 .blurred-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 500px;
   height: 100%;
-  background: var(--background-gradation);
+  background: var(--background-gradation, rgba(0, 0, 0, 0.3));
   backdrop-filter: blur(75px);
   z-index: 1;
 }
 
+.blurred-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://images.unsplash.com/photo-1727149924916-a63101f4a7cc?q=80&w=2727&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  z-index: 0;
+}
+
+/* 캐러셀 */
 .carousel {
   position: relative;
-  z-index: 1;
-  top: 130px;
+  z-index: 2;
   display: flex;
   justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center; /* 세로 중앙 정렬 */
-  gap: 8px; /* 이미지 간 간격 */
+  align-items: end; /* 세로 중앙 정렬 */
+  gap: 8px;
+  height: 100%; /* 부모 높이에 맞춤 */
 }
 
 .carousel-img {
   width: 90%;
-  height: auto;
+  max-width: 400px; /* 최대 이미지 폭 설정 */
   aspect-ratio: 5 / 6;
   object-fit: cover; /* 비율 유지 */
-  margin: 0 auto; /* 이미지 중앙 정렬 */
-  border-radius: var(--corner-radius-75);
+  border-radius: var(--corner-radius-75, 12px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 이미지에 그림자 추가 */
 }
+
+
+/* ------------------------ */
+/* 다이나믹 게이트 */
+/* ------------------------ */
+
+
+.dynamic-gate {
+  display: flex;
+  align-items: center;
+  background-color: var(--fill-silent);
+  box-shadow: 0px 2px 14px 0px var( --gray-alpha-300);
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: var(--corner-radius-50);
+  cursor: pointer;
+}
+
+.dynamic-gate-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dynamic-gate-img {
+  width: 52px;
+  border-radius: var(--corner-radius-25);
+}
+
+.dynamic-gate-info {
+  color: var(--text-primary);
+}
+
+.dynamic-title {
+  font-size: var(--font-size-150);
+  font-weight: var(--bold-700);
+  line-height: var(--line-height-6);
+}
+
+.dynamic-p {
+  font-size: var(--font-size-125);
+  font-weight: var(--bold-500);
+}
+
+/* ------------------------ */
+/* 브랜드 카드 */
+/* ------------------------ */
+
+.brand-card-section {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 60px;
+  margin-top: 24px;
+}
+
+.product-h-card {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.product-h-info{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand-card-img {
+  border-radius: var(--corner-radius-75);
+  margin-bottom: 16px;
+}
+
+.product-h-card{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-h-img {
+  width: 72px;
+  border-radius: var(--corner-radius-50);
+}
+
+.brand,
+.product-name,
+.price {
+  color: var(--text-primary);
+}
+.brand {
+  font-size: var(--font-size-125);
+  font-weight: var(--semibold-600);
+  line-height: var(--line-height-4);
+}
+.product-name {
+  font-size: var(--font-size-200);
+  font-weight: var(--regular-400);
+  line-height: var(--line-height-4);
+}
+
+.price {
+  font-size: var(--font-size-125);
+  font-weight: var(--semibold-600);
+  line-height: var(--line-height-4);
+}
+
+.product-h-card svg {
+  fill: var(--gray-400);
+}
+
+
+/* ------------------------ */
+/* 당신을 위한 추천 */
+/* ------------------------ */
+
+.for-you {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+.for-you h4 {
+  color: var(--text-primary);
+  font-size: var(--font-size-300);
+  font-weight: var(--bold-700);
+}
+
+.text-button {
+  font-size: var(--font-size-150);
+  color: var(--text-tertiary);
+}
+
+.for-you-carousel {
+
+}
+.row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+.product-card img {
+  border-radius: var(--corner-radius-50);
+  margin-bottom: 8px;
+}
+

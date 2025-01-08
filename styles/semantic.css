@@ -363,3 +363,24 @@
   --text-xxs-bold-textDecoration: ;
 }
 
+
+
+[data-theme="cute"] {
+  --background-default: #fff0f5;
+  --text-primary: #ff69b4;
+}
+
+[data-theme="cute"][data-dark-mode="dark"] {
+  --background-default: #4a2040;
+  --text-primary: #ffb6c1;
+}
+
+[data-theme="vivid"] {
+  --background-default: #ffe135;
+  --text-primary: #ff4500;
+}
+
+[data-theme="vivid"][data-dark-mode="dark"] {
+  --background-default: #4a2e00;
+  --text-primary: #ffa500;
+}

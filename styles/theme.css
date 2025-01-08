@@ -82,6 +82,7 @@
   --green-alpha-300: rgba(18, 186, 35, 0.08);
   --green-alpha-400: rgba(18, 186, 35, 0.08);
   --static-white: #ffffff;
+  --static-white-alpha: rgba(255, 255, 255, 0.16);
   --static-black: #000000;
   --corner-radius-25: 2px;
   --corner-radius-50: 4px;
@@ -539,24 +540,7 @@
     rgba(48, 48, 51, 0.2) 0%,
     #000 100%
   );
-}
+  --fill-silent: var(--gray-200);
 
-[data-theme="cute"] {
-  --background-default: #fff0f5;
-  --text-primary: #ff69b4;
-}
-
-[data-theme="cute"][data-dark-mode="dark"] {
-  --background-default: #4a2040;
-  --text-primary: #ffb6c1;
-}
-
-[data-theme="vivid"] {
-  --background-default: #ffe135;
-  --text-primary: #ff4500;
-}
-
-[data-theme="vivid"][data-dark-mode="dark"] {
-  --background-default: #4a2e00;
-  --text-primary: #ffa500;
+  
 }
