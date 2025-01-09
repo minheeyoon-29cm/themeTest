@@ -321,6 +321,26 @@ svg {
   border-radius: var(--corner-radius-50);
   margin-bottom: 8px;
 }
+.product-card-brand,
+.product-card-name, 
+.product-card-price {
+  color: var(--text-primary);
+}
+.product-card-brand {
+  font-size: var(--font-size-100);
+  font-weight: var(--semibold-600);
+  margin-bottom: 2px;
+}
+.product-card-name {
+  font-size: var(--font-size-150);
+  font-weight: var(--regular-400);
+  line-height: var(--line-height-3);
+  margin-bottom: 4px;
+}
+.product-card-price {
+  font-size: var(--font-size-200);
+  font-weight: var(--bold-700);
+}
 
 /* ------------------------ */
 /* 당신 취향의 브랜드 */

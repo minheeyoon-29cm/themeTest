@@ -500,7 +500,7 @@
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
     padding: 0;
     border-radius: var(--corner-radius-00);
     cursor: pointer;
@@ -539,11 +539,17 @@
   /* ------------------------ */
 
   .brand-card-section {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 60px;
-    margin-top: 24px;
-    background-color: var(--yellow-100);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 24px;
+    padding-top: 24px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 24px;
+    background-color: var(--yellow-400);
+    transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
+
   }
 
   .product-h-card {
@@ -551,6 +557,7 @@
     display: flex;
     justify-content: space-between;
   }
+
   .product-h-info {
     display: flex;
     align-items: center;
@@ -595,7 +602,7 @@
   }
 
   .product-h-card svg {
-    fill: var(--gray-400);
+    fill: var(--gray-900);
   }
 
   /* ------------------------ */
@@ -630,12 +637,12 @@
   }
   .row {
     display: flex;
-    gap: 6px;
+    gap: 1px;
     margin-bottom: 22px;
   }
 
   .product-card img {
-    border-radius: var(--corner-radius-50);
+    border-radius: 0px;
     margin-bottom: 8px;
   }
 
@@ -706,74 +713,371 @@
   /* Sticky Navigation */
   /* ------------------------ */
   .sticky-nav {
-    position: sticky;
-    bottom: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--gray-alpha-900);
-    backdrop-filter: blur(10px); /* 블러 효과 */
-    border-radius: 12px;
-    padding: 10px 20px;
-    max-width: 280px;
-    box-shadow: 0 4px 12px var(--gray-alpha-200);
-    z-index: 1000;
-    width: 90%; /* 너비를 화면의 90%로 설정 */
-    max-width: 300px; /* 최대 너비를 제한 */
-    margin: 0 auto; /* 추가적인 좌우 마진 설정 */
-    transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
-  }
-
-  .sticky-nav button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: transparent;
-    color: var(--text-on-color);
+    background-color: var(--blue-400); 
   }
 }
 
 /* VIVID + DARK MODE */
 [data-theme="vivid"][data-dark-mode="dark"] {
-}
+  /* ------------------------ */
+  /* 디자인 시작점 */
+  /* ------------------------ */
+  html, body {
+  height: 100%;
+  background-color: var(--blue-800);
+  transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
+  }
 
-/* CUTE 테마 */
-[data-theme="cute"] {
-  /* 히어로 배너 */
+  .section {
+    height: 100%;
+    background-color: var(--gray-950);
+  }
+
+  /* ------------------------ */
+  /* 탑네비 */
+  /* ------------------------ */
+  .top-navi-container {
+    position: absolute;
+    width: 100%;
+    max-width: 390px;
+    min-width: 375px;
+    z-index: 10;
+  }
+
+  .top-navi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 60px;
+  }
+
+  .top-navi,
+  svg {
+    fill: var(--common-on-white);
+  }
+
+  .r-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* ------------------------ */
+  /* 히어로 배너 섹션 */
+  /* ------------------------ */
   .top-hero-section {
-    background: linear-gradient(to bottom, var(--pink-200), var(--pink-100));
+    position: relative;
+    height: 540px;
+    transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
   }
 
-  /* 태그 스타일 */
+  .hero-banner {
+    position: relative;
+    height: 540px;
+    overflow: hidden;
+    transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
+  }
+
+  /* 태그 그룹 */
+  .tag-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 8px 20px; /* 상단-하단 여백 줄이기 */
+    gap: 10px; /* 태그 간 간격 */
+    transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
+  }
+
   .tag {
-    color: var(--deep-red-300);
-    font-size: var(--font-size-150);
-    font-weight: var(--semibold-600);
-    border: 1px solid var(--deep-red-200);
-    background: var(--deep-red-alpha-200);
-    border-radius: var(--corner-radius-full);
-    padding: 8px 14px;
+    color: var(--common-on-white);
+    font-size: var(--font-size-300);
+    font-weight: var(--medium-500);
+    border: 0px solid var(--static-white-alpha);
+    background: transparent;
+    padding: 0px 0px; /* 태그 크기 줄이기 */
+    border-radius: var(--corner-radius-100);
+    cursor: pointer;
+    transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
   }
 
+  /* 흐릿한 배경 */
+  .blurred-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gray-950);
+    z-index: 1;
+  }
+
+  .blurred-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  /* 캐러셀 */
+  .carousel {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: end; /* 세로 중앙 정렬 */
+    gap: 8px;
+    height: 100%; /* 부모 높이에 맞춤 */
+    padding-bottom: 32px;
+    transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
+  }
+
+  .carousel-img {
+    width: 80%;
+    max-width: 400px; /* 최대 이미지 폭 설정 */
+    aspect-ratio: 5 / 6;
+    object-fit: cover; /* 비율 유지 */
+    border-radius: var(--corner-radius-25);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 이미지에 그림자 추가 */
+  }
+
+  /* ------------------------ */
   /* 다이나믹 게이트 */
+  /* ------------------------ */
+
   .dynamic-gate {
-    background-color: var(--pink-100);
-    border: 1px solid var(--pink-200);
+    display: flex;
+    align-items: center;
+    background-color: var(--orange-red-600);
+    box-shadow: none;
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+    border-radius: var(--corner-radius-00);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
   }
 
-  /* 스티키 네비게이션 */
-  .sticky-nav {
-    background-color: var(--deep-red-alpha-300);
-    color: var(--static-white);
+  .dynamic-gate-flex {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
+
+  .dynamic-gate-img {
+    width: 72px;
+    border-radius: var(--corner-radius-25);
+  }
+
+  .dynamic-gate-info {
+    color: var(--text-on-color);
+  }
+
+  .dynamic-title {
+    font-size: var(--font-size-150);
+    font-weight: var(--medium-500);
+    line-height: var(--line-height-6);
+  }
+
+  .dynamic-p {
+    font-size: var(--font-size-100);
+    font-weight: var(--regular-400);
+  }
+
+  /* ------------------------ */
+  /* 브랜드 카드 */
+  /* ------------------------ */
+
+  .brand-card-section {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 24px;
+    padding-top: 24px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 24px;
+    background-color: var(--yellow-400);
+  }
+
+  .product-h-card {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product-h-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-card-img {
+    border-radius: var(--corner-radius-25);
+    margin-bottom: 16px;
+  }
+
+  .product-h-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .product-h-img {
+    width: 72px;
+    border-radius: var(--corner-radius-25);
+  }
+
+  .brand,
+  .product-name,
+  .price {
+    color: var(--text-primary);
+  }
+  .brand {
+    font-size: var(--font-size-125);
+    font-weight: var(--semibold-600);
+    line-height: var(--line-height-4);
+  }
+  .product-name {
+    font-size: var(--font-size-200);
+    font-weight: var(--regular-400);
+    line-height: var(--line-height-4);
+  }
+
+  .price {
+    font-size: var(--font-size-125);
+    font-weight: var(--semibold-600);
+    line-height: var(--line-height-4);
+  }
+
+  .product-h-card svg {
+    fill: var(--gray-900);
+  }
+
+  /* ------------------------ */
+  /* 당신을 위한 추천 */
+  /* ------------------------ */
+
+  .for-you {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+  }
+
+  .section-title h4 {
+    color: var(--text-on-color);
+    font-size: var(--font-size-300);
+    font-weight: var(--bold-700);
+  }
+
+  .text-button {
+    font-size: var(--font-size-150);
+    color: var(--text-secondary);
+  }
+
+  .for-you-carousel {
+    margin-bottom: 48px;
+  }
+  .row {
+    display: flex;
+    gap: 1px;
+    margin-bottom: 22px;
+  }
+
+  .product-card img {
+    border-radius: 0px;
+    margin-bottom: 8px;
+  }
+
+  /* ------------------------ */
+  /* 당신 취향의 브랜드 */
+  /* ------------------------ */
+  .brand-for-you {
+    margin: 0; /* 부모 컨테이너의 좌우 마진 제거 */
+    overflow: hidden; /* 스크롤바 숨기기 */
+    transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
+
+  }
+
+  .brand-section-title {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .brand-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+  }
+
+  .brand-section-title h4 {
+    color: var(--text-on-color);
+    font-size: var(--font-size-300);
+    font-weight: var(--bold-700);
+  }
+
+  .brand-list {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto; /* 가로 스크롤 활성화 */
+    padding: 0 20px; /* 리스트의 좌우 패딩 추가 */
+    scroll-behavior: smooth; /* 부드러운 스크롤 */
+    margin-bottom: 60px;
+  }
+
+  .brand-list::-webkit-scrollbar {
+    display: none; /* 크롬 및 사파리에서 스크롤바 숨기기 */
+  }
+
+  .brand-item {
+    display: flex; /* Flexbox 활성화 */
+    flex-direction: column; /* 수직 방향 배치 */
+    align-items: center; /* 가로 가운데 정렬 */
+    justify-content: center; /* 세로 가운데 정렬 */
+    text-align: center;
+    flex-shrink: 0; /* 아이템이 축소되지 않도록 설정 */
+  }
+
+  .brand-item p {
+    font-size: var(--font-size-125);
+    color: var(--text-on-color);
+    font-weight: var(--regular-400);
+  }
+
+  .brand-item-img {
+    width: 64px;
+    height: 64px; /* 높이를 추가해 비율 유지 */
+    border-radius: var(--corner-radius-full);
+    margin-bottom: 8px;
+    object-fit: cover; /* 이미지를 컨테이너에 맞춤 */
+    border: 0.5px solid var(--gray-alpha-800);
+  }
+
+.product-card-brand,
+.product-card-name, 
+.product-card-price {
+  color: var(--text-on-color);
+  opacity: 0.7;
 }
 
-/* CUTE + DARK MODE */
-[data-theme="cute"][data-dark-mode="dark"] {
+.sticky-nav {
+  background-color: var(--blue-600); 
+}
+
 }
