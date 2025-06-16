@@ -34,7 +34,7 @@
 
 /* ✅ Pressed (Active) 상태 */
 .ui.button:active {
-    scale: var(--motion-scale-down1);
+  transform: translateZ(0) scale(var(--motion-scale-down1));
 }
 
 /* ✅ Focus 상태 */

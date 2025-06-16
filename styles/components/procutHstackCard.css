@@ -2,7 +2,6 @@
   margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
-  display: flex;
   align-items: center;
   gap: 12px;
  transition:
@@ -40,5 +39,5 @@
 
 /* ✅ Pressed (Active) 상태 */
 .product-h-card:active {
-  scale: var(--motion-scale-down1);
+  transform: translateZ(0) scale(var(--motion-scale-down1));
 }

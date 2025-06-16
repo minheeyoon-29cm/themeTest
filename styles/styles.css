@@ -24,7 +24,7 @@ body {
 
 body {
   margin: 0 auto;
-  cursor: pointer; /* iOS용 active 트리거 */
+  /* cursor: pointer; */
 }
 
 img,
@@ -284,7 +284,7 @@ svg {
 }
 
 .brand-card-img:active {
-  scale: var(--motion-scale-down1);  
+  transform: translateZ(0) scale(var(--motion-scale-down1));
 }
 
 

@@ -43,5 +43,5 @@
 
 /* ✅ Pressed (Active) 상태 */
 .product-card:active {
-  scale: var(--motion-scale-down1);
+  transform: translateZ(0) scale(var(--motion-scale-down1));
 }
