@@ -1,0 +1,37 @@
+.product-h-card {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
+}
+
+.product-h-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.product-h-img {
+  width: 72px;
+  border-radius: var(--corner-radius-50);
+}
+
+.product-h-card svg {
+  fill: var(--gray-400);
+}
+
+
+/* ✅ Hover 상태 */
+
+.product-h-card:hover {
+  cursor: pointer;
+}
+
+/* ✅ Pressed (Active) 상태 */
+.product-h-card:active {
+  scale: var(--motion-scale-down1);
+}

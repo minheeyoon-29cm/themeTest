@@ -361,6 +361,39 @@
   --text-xxs-bold-paragraphIndent: ;
   --text-xxs-bold-textCase: ;
   --text-xxs-bold-textDecoration: ;
+  /* motion */
+/* 모션 (일반 인터랙션용) */
+--motion-easing-smooth: var(--motion-easing-standard-default-effects); 
+/* 버튼, 탭 등 일반적인 인터랙션에 적합한 부드러운 전환 */
+--motion-easing-subtle: var(--motion-easing-standard-slow-effects);    
+/* 페이드인 등 미세한 인터랙션이나 서브 요소에 적합 */
+--motion-easing-snappy: var(--motion-easing-standard-fast-effects);    
+/* 빠른 피드백이 필요한 액션 (예: 버튼 클릭 등)에 적합 */
+
+/* 강조 또는 감성 표현이 필요한 인터랙션 */
+--motion-easing-emphasized: var(--motion-easing-expressive-default-spatial); 
+/* FAB 확장, 카드 확대 등 강조되는 모션에 적합 */
+--motion-easing-expressive-snappy: var(--motion-easing-expressive-fast-effects); 
+/* 감성적이면서도 빠른 리액션이 필요한 경우 */
+--motion-easing-expressive-smooth: var(--motion-easing-expressive-slow-effects); 
+/* 감성적이고 부드러운 전환에 적합 */
+
+/* 공간 전환용 (Standard 계열) */
+--motion-easing-spatial-fast: var(--motion-easing-standard-fast-spatial);
+/* 탭 전환, 작은 위치 이동에 적합한 빠른 공간 전환 */
+--motion-easing-spatial-default: var(--motion-easing-standard-default-spatial); 
+/* 일반적인 컴포넌트 위치 이동에 적합 */
+--motion-easing-spatial-slow: var(--motion-easing-standard-slow-spatial); 
+/* 넓은 범위의 전환(예: 전체 레이아웃 이동)에 적합 */
+
+/* 공간 전환용 (Expressive 계열) */
+--motion-easing-expressive-spatial-fast: var(--motion-easing-expressive-fast-spatial); 
+/* 카드 등장/이탈 등에서 리듬감 있는 빠른 공간 전환 */
+--motion-easing-expressive-spatial-default: var(--motion-easing-expressive-default-spatial); 
+/* 강조되지만 기본적인 공간 이동 */
+--motion-easing-expressive-spatial-slow: var(--motion-easing-expressive-slow-spatial); 
+/* 감성적이고 서사적인 화면 전환에 적합 */
+
 }
 
 

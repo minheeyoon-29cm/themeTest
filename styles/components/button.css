@@ -1,0 +1,122 @@
+/* ------------------------ */
+/* Button 공통 스타일 */
+/* ------------------------ */
+.ui.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px 20px;
+  border-radius: var(--corner-radius-50);
+  font-size: var(--font-size-125, 14px);
+  font-weight: var(--bold-700);
+  width: 100%;
+  margin-bottom: 20px;
+  transform-origin: center;
+
+  /* 모션토큰테스트 */
+  transition: all var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
+  background-color: var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
+}
+
+/* ✅ Hover 상태 */
+
+/* ✅ Pressed (Active) 상태 */
+.ui.button:active {
+    scale: var(--motion-scale-down1);
+}
+
+/* ✅ Focus 상태 */
+.ui.button:focus-visible {
+  outline: 1.5px solid var(--common-interactive);
+  outline-offset: 1.5px;
+}
+
+/* ------------------------ */
+/* Primary  */
+/* ------------------------ */
+
+
+.ui.primary.button {
+    background-color: var(--fill-primary);
+    color: var(--text-on-color);
+}
+
+.ui.primary.button:hover {
+  background-color: var(--fill-primary-hover);
+}
+.ui.primary.button:active {
+  background-color: var(--fill-primary-pressed);
+}
+
+/* ------------------------ */
+/* Secondary  */
+/* ------------------------ */
+
+.ui.secondary.button {
+    background-color: var(--fill-silent);
+    border: 1px solid var(--border-line);
+    color: var(--text-primary);
+}
+
+.ui.secondary.button:hover {
+    background-color: var(--fill-silent-hover);
+    color: var(--text-primary-hover);
+}
+.ui.secondary.button:active {
+    background-color: var(--fill-silent-pressed);
+    color: var(--text-primary-pressed);
+}
+
+
+/* ------------------------ */
+/* Tertiary  */
+/* ------------------------ */
+
+.ui.tertiary.button {
+    background-color: var(--fill-tertiary);
+    color: var(--text-primary);
+}
+
+.ui.tertiary.button:hover {
+    color: var(--text-primary-hover);
+}
+.ui.tertiary.button:active {
+    color: var(--text-primary-pressed);
+}
+
+/* ------------------------ */
+/* Negative  */
+/* ------------------------ */
+
+
+.ui.negative.button {
+    background-color: var(--common-negative);
+    color: var(--common-on-white);
+}
+
+
+.ui.negative.button:hover {
+  background-color: var(--common-negative-hover);
+}
+.ui.negative.button:active {
+  background-color: var(--common-negative-pressed);
+}
+
+
+/* ------------------------ */
+/* Like  */
+/* ------------------------ */
+
+
+.product-h-card svg {
+  transition: transform var(--motion-duration-short2) var(--motion-easing-standard-fast-effects);
+  cursor: pointer;
+}
+.product-h-card svg:hover {
+  fill: var(--gray-600);
+}
+.product-h-card svg:active {
+  transform: scale(0.95);
+  fill: var(--gray-800);
+}

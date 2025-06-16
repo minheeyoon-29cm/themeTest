@@ -138,6 +138,50 @@
     rgba(48, 48, 51, 0.2) 0%,
     #fff 100%
   );
+
+    /* === Duration Tokens (Material 3 Spec) === */
+  --motion-duration-short1: 50ms;
+  --motion-duration-short2: 100ms;
+  --motion-duration-short3: 150ms;
+  --motion-duration-short4: 200ms;
+
+  --motion-duration-medium1: 250ms;
+  --motion-duration-medium2: 300ms;
+  --motion-duration-medium3: 350ms;
+  --motion-duration-medium4: 400ms;
+
+  --motion-duration-long1: 450ms;
+  --motion-duration-long2: 500ms;
+  --motion-duration-long3: 550ms;
+  --motion-duration-long4: 600ms;
+
+  --motion-duration-extra-long1: 700ms;
+  --motion-duration-extra-long2: 800ms;
+  --motion-duration-extra-long3: 900ms;
+  --motion-duration-extra-long4: 1000ms;
+
+  /* === Easing Tokens (Converted Spring to Bezier) === */
+  --motion-easing-expressive-fast-spatial: cubic-bezier(0.42, 1.67, 0.21, 0.90);
+  --motion-easing-expressive-default-spatial: cubic-bezier(0.38, 1.21, 0.22, 1.00);
+  --motion-easing-expressive-slow-spatial: cubic-bezier(0.39, 1.29, 0.35, 0.98);
+
+  --motion-easing-expressive-fast-effects: cubic-bezier(0.31, 0.94, 0.34, 1.00);
+  --motion-easing-expressive-default-effects: cubic-bezier(0.34, 0.80, 0.34, 1.00);
+  --motion-easing-expressive-slow-effects: cubic-bezier(0.34, 0.88, 0.34, 1.00);
+
+  --motion-easing-standard-fast-spatial: cubic-bezier(0.27, 1.06, 0.18, 1.00);
+  --motion-easing-standard-default-spatial: cubic-bezier(0.27, 1.06, 0.18, 1.00);
+  --motion-easing-standard-slow-spatial: cubic-bezier(0.27, 1.06, 0.18, 1.00);
+
+  --motion-easing-standard-fast-effects: cubic-bezier(0.31, 0.94, 0.34, 1.00);
+  --motion-easing-standard-default-effects: cubic-bezier(0.34, 0.80, 0.34, 1.00);
+  --motion-easing-standard-slow-effects: cubic-bezier(0.34, 0.88, 0.34, 1.00);
+
+    /* === Motion Scale Tokens === */
+   --motion-scale-down1: 0.95;
+  --motion-scale-down2: 0.92;
+  --motion-scale-up1: 1.01;
+  --motion-scale-up2: 1.04;
 }
 
 [data-dark-mode="dark"]  {
