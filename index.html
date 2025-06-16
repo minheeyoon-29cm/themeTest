@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/styles/styles.css" />
     <link rel="stylesheet" href="/styles/theme.css" />
     <link rel="stylesheet" href="/styles/semantic.css" />
+    <link rel="stylesheet" href="/styles/interaction-enhanced.css" />
+
   </head>
   <body>
     <!-- Prototype starting point -->
@@ -379,11 +381,10 @@
         </div>
       </div>
     </div>
-    <nav class="sticky-nav">
-      <button onclick="setTheme('basic')">basic</button>
-      <button onclick="setTheme('vivid')">vivid</button>
-      <button id="theme-toggle">Dark</button>
-    </nav>
+
+    <!-- 추가: 하단 우측 FAB 형태 버튼 -->
+    <button id="theme-toggle" class="theme-fab">🌚</button>
+
     <script src="/scripts/script.js"></script>
   </body>
 </html>

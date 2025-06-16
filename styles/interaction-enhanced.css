@@ -1,0 +1,56 @@
+
+/* Interactions for button */
+button,
+.product-h-card,
+.product-card,
+.tag,
+.dynamic-gate,
+.text-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+button:hover,
+.product-h-card:hover,
+.product-card:hover,
+.tag:hover,
+.dynamic-gate:hover,
+.text-button:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+button:active,
+.product-h-card:active,
+.product-card:active,
+.tag:active,
+.dynamic-gate:active,
+.text-button:active {
+  transform: scale(0.96);
+  opacity: 0.8;
+}
+
+button:focus-visible,
+.product-h-card:focus-visible,
+.product-card:focus-visible,
+.tag:focus-visible,
+.dynamic-gate:focus-visible,
+.text-button:focus-visible {
+  outline: 2px solid var(--gray-500);
+  outline-offset: 2px;
+  transform: scale(1.01);
+}
+
+/* Like button (svg) */
+.product-h-card svg {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.product-h-card svg:hover {
+  transform: scale(1.1);
+  fill: var(--gray-600);
+}
+.product-h-card svg:active {
+  transform: scale(0.95);
+  fill: var(--gray-800);
+}

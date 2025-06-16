@@ -1,5 +1,7 @@
 @import "semantic.css"; /* Import Semantic Variables */
 @import "theme.css"; /* Import Theme Variables */
+@import "interaction-enhanced.css";
+
 
 /* CSS Reset */
 * {
@@ -406,37 +408,22 @@ svg {
 }
 
 /* ------------------------ */
-/* Sticky Navigation */
+/* FAB */
 /* ------------------------ */
-.sticky-nav {
-  position: sticky;
-  bottom: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: var(--gray-alpha-900);
-  backdrop-filter: blur(10px); /* 블러 효과 */
-  border-radius: 12px;
-  padding: 10px 20px;
-  max-width: 280px;
-  box-shadow: 0 4px 12px var(--gray-alpha-200);
-  z-index: 1000;
-  width: 90%; /* 너비를 화면의 90%로 설정 */
-  max-width: 300px; /* 최대 너비를 제한 */
-  margin: 0 auto; /* 추가적인 좌우 마진 설정 */
-  transition: all 0.5s ease; /* 부드러운 애니메이션 효과 */
-}
 
-.sticky-nav button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
+.theme-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: var(--gray-100);
+  color: var(--text-color);
   border: none;
-  font-size: 14px;
-  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  background-color: transparent;
-  color: var(--text-on-color);
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
