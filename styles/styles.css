@@ -245,9 +245,14 @@ svg {
 .brand-card-img {
   border-radius: var(--corner-radius-75);
   margin-bottom: 16px;
-  transition: all var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
+  transition:
+    transform var(--motion-duration-short4) var(--motion-easing-expressive-smooth),
+    opacity var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
 
-    touch-action: manipulation;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
 

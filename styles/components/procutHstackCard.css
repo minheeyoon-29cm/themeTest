@@ -5,9 +5,13 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  transition: all var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
+ transition:
+    transform var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
 
-    touch-action: manipulation;
+  transform: translateZ(0);
+  will-change: transform;
+
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
 

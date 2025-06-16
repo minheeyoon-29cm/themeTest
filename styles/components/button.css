@@ -14,14 +14,21 @@
   margin-bottom: 20px;
   transform-origin: center;
 
-  /* 모션토큰테스트 */
-  transition: all var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
-  background-color: var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
+  /* ✅ GPU 최적화 트리거 */
+  transform: translateZ(0);
+  will-change: transform, opacity, background-color;
 
+  /* ✅ 모션 토큰 기반 인터랙션 */
+  transition:
+    transform var(--motion-duration-short4) var(--motion-easing-expressive-smooth),
+    background-color var(--motion-duration-short4) var(--motion-easing-expressive-smooth),
+    opacity var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
+
+  /* ✅ 모바일 터치 반응 최적화 */
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
-
 }
+
 
 /* ✅ Hover 상태 */
 
