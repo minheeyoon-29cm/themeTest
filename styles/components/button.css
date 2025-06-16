@@ -17,6 +17,10 @@
   /* 모션토큰테스트 */
   transition: all var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
   background-color: var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
+
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+
 }
 
 /* ✅ Hover 상태 */

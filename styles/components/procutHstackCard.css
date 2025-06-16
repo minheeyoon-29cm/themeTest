@@ -6,6 +6,9 @@
   align-items: center;
   gap: 12px;
   transition: all var(--motion-duration-short4) var(--motion-easing-expressive-smooth);
+
+    touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .product-h-info {
