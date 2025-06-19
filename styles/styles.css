@@ -68,12 +68,13 @@ table {
 /* ------------------------ */
 
 .section {
-  width: 390px;
-  min-width: 375px;
+  max-width: 390px;
+  min-width: 320px;
   margin: 0 auto;
-  overflow-y: auto;
+  padding-bottom: 80px; /* bottom-navi 공간 확보 */
   background-color: var(--background-default);
 }
+
 
 /* ------------------------ */
 /* 탑네비 */
@@ -106,6 +107,87 @@ svg {
   align-items: center;
   gap: 16px;
 }
+
+/* ------------------------ */
+/* 바텀네비 */
+/* ------------------------ */
+
+/* 공통 container 정렬용 */
+.bottom-navi-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: var(--background-default);
+  border-top: 1px solid var(--border-default);
+
+  /* ✅ 가운데 정렬 */
+  max-width: 390px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 100;
+}
+
+/* 내부 네비게이션 */
+.bottom-navi {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+/* 항목 스타일 */
+.bottom-navi a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: var(--font-size-100, 12px);
+  color: var(--text-secondary);
+  gap: 4px;
+  text-decoration: none;
+
+  transition:
+    transform var(--motion-duration-short4) var(--motion-easing-smooth),
+    color var(--motion-duration-short4) var(--motion-easing-smooth),
+    opacity var(--motion-duration-short4) var(--motion-easing-smooth);
+  transform-origin: center;
+  opacity: 1;
+}
+
+.bottom-navi a img {
+  width: 24px;
+  height: 24px;
+}
+
+.bottom-navi span {
+  font-size: var(--font-size-25);
+  color: var(--text-secondary);
+  transition: color var(--motion-duration-short4) var(--motion-easing-smooth);
+}
+
+.bottom-navi a:hover {
+  transform: scale(var(--motion-scale-up1));
+  color: var(--text-primary); /* optional: 텍스트 강조 */
+}
+
+.bottom-navi a:active {
+  transform: scale(var(--motion-scale-down1));
+  opacity: 0.85;
+}
+
+.bottom-navi a.active span {
+  color: var(--text-primary);
+  font-weight: var(--bold-700);
+}
+.bottom-navi a.active img {
+  filter: brightness(1.2); /* 아이콘 강조용 (fill.svg와 병행) */
+}
+
+
+
 
 /* ------------------------ */
 /* 히어로 배너 섹션 */

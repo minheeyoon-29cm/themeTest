@@ -11,7 +11,7 @@
   <body>
     <!-- Prototype starting point -->
     <div class="section">
-      <!-- navigation -->
+      <!-- topNavigation -->
       <div class="top-navi-container">
         <div class="top-navi">
           <a>
@@ -68,6 +68,34 @@
           <div class="tag">베스트</div>
         </div>
       </div>
+
+<!-- bottomNavigation -->
+<div class="bottom-navi-container">
+  <nav class="bottom-navi">
+    <a href="/index.html">
+      <img src="assets/icon/ic-home.svg" alt="홈" />
+      <span>홈</span>
+    </a>
+    <a href="/pages/category.html">
+      <img src="assets/icon/ic-category.svg" alt="카테고리" />
+      <span>카테고리</span>
+    </a>
+    <a href="/pages/search.html">
+      <img src="assets/icon/ic-search.svg" alt="검색" />
+      <span>검색</span>
+    </a>
+    <a href="/pages/likes.html">
+      <img src="assets/icon/ic-heart.svg" alt="좋아요" />
+      <span>좋아요</span>
+    </a>
+    <a href="/pages/mypage.html">
+      <img src="assets/icon/ic-my.svg" alt="마이페이지" />
+      <span>마이페이지</span>
+    </a>
+  </nav>
+</div>
+
+
 
       <!-- hero-banner -->
       <div class="top-hero-section">
@@ -201,15 +229,17 @@
         <!-- 대충 2단 캐러셀 -->
         <div class="for-you-carousel">
           <div class="row">
+            <a href="https://product.29cm.co.kr/catalog/2034906?brandId=2203&sort=RECOMMEND&defaultSort=RECOMMEND&sortOrder=DESC&source=brand">
             <div class="product-card">
               <img
                 src="https://img.29cm.co.kr/next-product/2023/04/05/2d0e8dc38a474409b4aeed83a1601671_20230405205922.jpg?width=400"
                 alt=""
               />
-              <p class="product-card-brand">라튤립</p>
+              <p class="product-card-brand">이동됩니다</p>
               <p class="product-card-name">헤이든 자동온도조절 차렵이불</p>
               <p class="product-card-price">107,100원</p>
             </div>
+            </a>
             <div class="product-card">
               <img
                 src="https://img.29cm.co.kr/item/202412/11efb395007fd00f8521c3581ac42c73.jpg?width=400"
@@ -267,26 +297,32 @@
 
       <!-- Brand Section -->
       <div class="brand-card-section">
-        <img
+        <a
+          href="https://shop.29cm.co.kr/brand/2203?brandId=2203&sort=RECOMMEND&defaultSort=RECOMMEND&sortOrder=DESC"
+          class="brand-card-link"> 
+               <img
           class="brand-card-img"
           src="https://img.29cm.co.kr/cm/202501/11efcd6238e8bb0cad1b193ece2ea622.jpg?width=1080&q=80&format=auto"
           alt=""
-        />
+        />    
+       </a>
+
 
         <div class="product-h-card">
-          <div class="product-h-info">
+          <a href="https://www.musinsa.com/products/5093305">
+            <div class="product-h-info">
             <img
               class="product-h-img"
               src="https://img.29cm.co.kr/cm/202501/11efcd616a9de91f8521d99ecb651745.jpg?width=1080&q=80&format=auto"
               alt=""
             />
             <div>
-              <p class="brand">Navan</p>
+              <p class="brand">이동합니다</p>
               <p class="product-name">Write product name short</p>
               <p class="price">999,999,999원</p>
             </div>
           </div>
-
+          </a>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
@@ -302,18 +338,20 @@
         </div>
 
         <div class="product-h-card">
-          <div class="product-h-info">
+         <a href="https://www.musinsa.com/products/5093305">
+            <div class="product-h-info">
             <img
               class="product-h-img"
-              src="https://img.29cm.co.kr/cm/202501/11efcd9ddbf8cd6185215b0d634cad30.image/jpeg?width=1440&q=80&format=auto"
+              src="https://img.29cm.co.kr/cm/202501/11efcd616a9de91f8521d99ecb651745.jpg?width=1080&q=80&format=auto"
               alt=""
             />
             <div>
-              <p class="brand">Navan</p>
+              <p class="brand">이동합니다</p>
               <p class="product-name">Write product name short</p>
               <p class="price">999,999,999원</p>
             </div>
           </div>
+          </a>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -330,13 +368,14 @@
         </div>
       </div>
 
-      <!-- 당신을 위한 브랜드 -->
-      <div class="brand-for-you">
+      <!-- 당신 취향의 브랜드 -->
+      <div class="brand-for-you"> 
         <div class="brand-section-title">
           <h4>당신 취향의 브랜드</h4>
         </div>
         <div class="brand-list">
           <div class="brand-item">
+            <a class=""></a>
             <img
               class="brand-item-img"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq_B-558WVUuIw038tOKYgCAV9eQcv2xx-Rw&s"
@@ -379,17 +418,25 @@
         </div>
       </div>
 
-      <!-- 당신을 위한 브랜드 -->
+      <!-- 컴포넌트 -->
       <div class="brand-for-you">
         <div class="brand-section-title">
-          <h4>Button Component</h4>
+          <h4>Button(모두 이동 됩니다)</h4>
         </div>
         <!-- 버튼 컴포넌트 스타일 -->
         <div class="button-list">
-          <button class="ui primary button">Primary</button>
-          <button class="ui secondary button">Secondary</button>  
-          <button class="ui tertiary button">Tertiary</button>  
-          <button class="ui negative button">Negative</button>
+          <a href="https://www.29cm.co.kr/">
+            <button class="ui primary button">Primary</button>
+          </a>
+          <a href="https://www.29cm.co.kr/">
+            <button class="ui secondary button">Secondary</button>
+          </a>
+          <a href="https://www.29cm.co.kr/">
+            <button class="ui tertiary button">Tertiary</button>
+          </a>
+          <a href="https://www.29cm.co.kr/">
+            <button class="ui negative button">Negative</button>
+          </a>
       </div>
     </div>
 
